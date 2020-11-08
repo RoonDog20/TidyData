@@ -19,7 +19,7 @@
 ## The output from the function is tidy data set from step 5: a data frame with 
 ## the average of each variable for each activity and each subject.
 
-## Need to load 'dplyr'
+## The script requires the 'dplyr' library to manipulate the tables.
 
 library("dplyr")
 
@@ -29,18 +29,18 @@ run_analysis <- function() {
    ## "train" and "test" data columns when we read them in with descriptive
    ## labels
 	
-   var_names <- pull(read.table("Dataset/features.txt"), V2)
+   var_names <- pull(read.table("Data/features.txt"), V2)
    
    ## Read the training and testing data, activity labels, & subjects 
    ## into tables
    
-   train_data     <- read.table("Dataset/Train/train_measures.txt", col.names = var_names)
-   train_subject  <- read.table("Dataset/Train/train_subjects.txt", col.names = "Subject")
-   train_activity <- read.table("Dataset/Train/train_activities.txt", col.names = "Activity")
+   train_data     <- read.table("Data/train/X_train.txt", col.names = var_names)
+   train_subject  <- read.table("Data/train/subject_train.txt", col.names = "Subject")
+   train_activity <- read.table("Data/train/y_train.txt", col.names = "Activity")
    
-   test_data     <- read.table("Dataset/Test/test_measures.txt", col.names = var_names)
-   test_subject  <- read.table("Dataset/Test/test_subjects.txt", col.names = "Subject")
-   test_activity <- read.table("Dataset/Test/test_activities.txt", col.names = "Activity")
+   test_data     <- read.table("Data/test/X_test.txt", col.names = var_names)
+   test_subject  <- read.table("Data/test/subject_test.txt", col.names = "Subject")
+   test_activity <- read.table("Data/test/y_test.txt", col.names = "Activity")
    
    ## Extract only the mean and standard deviation for each measurement and then merge 
    ## tables together to create a single dataset

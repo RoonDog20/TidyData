@@ -23,17 +23,23 @@ The project includes the following files:
    4. run_analysis.R - an R script that contains a single function,
         run_analysis() that computers the tidy dataset above based on
 		source data layed out as described below:
-   5. Dataset/ - directory containing the source dataset used to create
-        the tidy dataset
-      a. features_info.txt'- Shows information about the variables used on the feature vector.
-      b. features.txt' - List of all features.
-      c. activity_labels.txt - Links the class labels with their activity name.
-      d. Train/train_activities.txt - Activity type for each row of training measurements
-	  e. Train/train_measures.txt - Measurement data for each training observations
-	  f. Train/train_subjects - Subject identified for each of row of treaining measurements
-      g. Test/test_activities.txt - Activity type for each row of test measurements
-	  h. Test/test_measures.txt - Measurement data for each test observations
-	  i. Test/test_subjects - Subject identified for each of row of test measurements
+
+The 'run_analysis.R' script requires the original Samsung data be in a directory
+named 'Data' within the current working directory with the 'test' and 'train' 
+subdirectories being under this. It requires the following files:
+
+     a. 'Data/features_info.txt' - Shows information about the variables used on
+        the feature vector
+     b. 'Data/features.txt' - List of all features
+     c. 'Data/activity_labels.txt' - Links the class labels with their activity name
+     d. 'Data/train/y_train.txt' - Ativity type for each row of training measurements
+	   e. 'Data/train_measures.txt' - Measurement data for each training observations
+	   f. 'Data/train/subject_train.txt' - Subject identified for each of row of 
+	      treaining measurements
+     g. 'Data/test/y_test.txt' - Activity type for each row of test measurements
+	   h. 'Data/test/X_test.txt' - Measurement data for each test observations
+	   i. 'Data/test/subject_test.txt' - Subject identified for each of row of test 
+	       measurements
 
 The data for the project was obtained from:
 
